@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Grid - Restaurante Sabores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid-explicacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Restaurante Sabores" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cardapio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="horarios.html">Horários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="bootstrap.html">Sobre o Layout</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="container py-5 mt-5">
+        <h1 class="mb-4 text-center">Organização do Layout com Bootstrap 4 Grid</h1>
+        
+        <section class="highlight-box">
+            <h2>Estrutura Básica do Grid</h2>
+            <p>O sistema de grid do Bootstrap 4 é baseado em 12 colunas e utiliza classes responsivas para diferentes tamanhos de tela.</p>
+            
+            <div class="code-example mt-4">
+                <h4>Estrutura HTML básica:</h4>
+                <pre><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;Conteúdo&lt;/div&gt;
+        &lt;div class="col-md-4"&gt;Conteúdo&lt;/div&gt;
+        &lt;div class="col-md-4"&gt;Conteúdo&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2>Aplicação na Nossa Página Inicial</h2>
+            
+            <article class="mt-4">
+                <h3>1. Hero Section (Cabeçalho)</h3>
+                <div class="grid-example">
+                    <div class="row">
+                        <div class="col-12 example-col">
+                            <p>Ocupa toda a largura (12 colunas) em todos os dispositivos</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="mt-4">
+                <h3>2. Seção de Destaques</h3>
+                <div class="grid-example">
+                    <div class="row">
+                        <div class="col-12 example-col mb-3">
+                            <p>Título e descrição - ocupa 12 colunas</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 example-col">
+                            <p>Card de destaque 1 (4 colunas em desktop, 6 em tablets)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 example-col">
+                            <p>Card de destaque 2 (4 colunas em desktop, 6 em tablets)</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 example-col">
+                            <p>Card de destaque 3 (4 colunas em desktop, 12 em tablets)</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="mt-4">
+                <h3>3. Rodapé</h3>
+                <div class="grid-example">
+                    <div class="row">
+                        <div class="col-md-6 example-col">
+                            <p>Informações de contato (6 colunas em desktop, 12 em mobile)</p>
+                        </div>
+                        <div class="col-md-6 example-col text-md-right">
+                            <p>Redes sociais e direitos (6 colunas em desktop, 12 em mobile)</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <section class="mt-5">
+            <h2>Breakpoints e Responsividade</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Classe</th>
+                            <th>Breakpoint</th>
+                            <th>Largura</th>
+                            <th>Comportamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>.col-</code></td>
+                            <td>Extra small</td>
+                            <td>&lt;576px</td>
+                            <td>Mobile (celulares pequenos)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.col-sm-</code></td>
+                            <td>Small</td>
+                            <td>≥576px</td>
+                            <td>Mobile (celulares maiores)</td>
+                        </tr>
+                        <tr>
+                            <td><code>.col-md-</code></td>
+                            <td>Medium</td>
+                            <td>≥768px</td>
+                            <td>Tablets</td>
+                        </tr>
+                        <tr>
+                            <td><code>.col-lg-</code></td>
+                            <td>Large</td>
+                            <td>≥992px</td>
+                            <td>Desktops</td>
+                        </tr>
+                        <tr>
+                            <td><code>.col-xl-</code></td>
+                            <td>Extra large</td>
+                            <td>≥1200px</td>
+                            <td>Desktops grandes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="highlight-box mt-4">
+            <h3>Estratégia de Layout Responsivo</h3>
+            <p>Para criar um layout responsivo eficiente:</p>
+            <ol>
+                <li>Comece pelo mobile (<strong>mobile-first</strong>)</li>
+                <li>Use classes sem prefixo (<code>.col-</code>) para layouts que devem ser iguais em todos os dispositivos</li>
+                <li>Adicione classes com prefixos (<code>.col-md-</code>, <code>.col-lg-</code>) para ajustar o layout em telas maiores</li>
+                <li>Utilize <code>.row</code> para agrupar colunas e garantir o alinhamento correto</li>
+                <li>Combine classes para diferentes breakpoints (ex: <code>col-md-6 col-lg-4</code>)</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Restaurante Sabores</h5>
+                    <p>Rua Gastronômica, 123 - Centro</p>
+                    <p>Telefone: (11) 1234-5678</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <h5>Siga-nos</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p class="mt-3">© 2023 Restaurante Sabores. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
